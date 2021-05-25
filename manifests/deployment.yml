@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: microserviceaksintegrationimageaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microserviceaksintegrationimageaks
+  template:
+    metadata:
+      labels:
+        app: microserviceaksintegrationimageaks 
+    spec:
+      containers:
+        - name: microserviceaksintegrationimageaks 
+          image: microserviceaksregistry.azurecr.io/microserviceaksintegrationimageaks
+          ports:
+          - containerPort: 80
