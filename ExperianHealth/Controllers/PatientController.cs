@@ -31,7 +31,7 @@ namespace ExperianHealth.Controllers
         {           
             var result = _iPatient.GetPatientDetails(patientId);
             if (result == null)
-                return NotFound($"Sorry No record found for the patient Id {patientId}");
+                return NotFound($"No record found for the patient Id {patientId}");
 
             return Ok(result);
         }
